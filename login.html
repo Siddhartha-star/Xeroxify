@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Create Your <span class="highlight">Xeroxify Account</span></h1>
+        <h2>Order today!</h2>
+    </header>
+
+    <div class="login-container">
+        <div class="form-container">
+            <h2>Welcome Back</h2>
+            
+            <form id="loginForm">
+                <div class="input-group" >
+                    <label for="username">Username or Email</label>
+                    <input type="text" id="username" placeholder="Enter your username or email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <div class="options">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a id = "fg" href="#" id="fg">Forgot password?</a>
+                </div>
+                <button type="submit" id="login" class="login-btn">Login</button>
+                <p class="register-link">Don't have an account? <a href="./sign-up.html">Register now</a></p>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Xeroxify. All rights reserved.</p>
+    </footer>
+
+    <script src="./script.js?v=1"></script> <!-- Move the script tag here -->
+</body>
+</html>

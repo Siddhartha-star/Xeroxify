@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xeroxify - Pricing</title>
+    <link rel="stylesheet" href="pricing.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">Xeroxify</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="addtocart">
+            <div class="pricing-container">
+                <div class="pricing-card">
+                    <h3>Basic Plan</h3>
+                    <p class="price">100/-</p>
+                    <ul>
+                        <li>Black & White Printing</li>
+                        <li>10 Pages Free</li>
+                        <li>Standard Delivery</li>
+                    </ul>
+                    <button class="add-to-cart" onclick="addToCart('Basic Plan', 0)">Add to Cart</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Standard Plan</h3>
+                    <p class="price">500/-</p>
+                    <ul>
+                        <li>Color Printing</li>
+                        <li>50 Pages</li>
+                        <li>Priority Delivery</li>
+                    </ul>
+                    <button class="add-to-cart" onclick="addToCart('Standard Plan', 4.99)">Add to Cart</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Premium Plan</h3>
+                    <p class="price">1000/-</p>
+                    <ul>
+                        <li>Bulk Printing</li>
+                        <li>200 Pages</li>
+                        <li>Express Delivery</li>
+                    </ul>
+                    <button class="add-to-cart" onclick="addToCart('Premium Plan', 9.99)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <style>
+       
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .pricing-plan {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 250px;
+        }
+        .pricing-plan h2 {
+            margin: 0 0 10px;
+        }
+        .pricing-plan p {
+            margin: 5px 0;
+        }
+        .pricing-plan button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+        .pricing-plan button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+
+
+    <script>
+        function addToCart(plan, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ plan, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${plan} Plan added to cart!`);
+            window.location.href = 'product-cart.html';
+        }
+    </script>
+    
+    <footer>
+        <p>&copy; 2025 Xeroxify. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+
